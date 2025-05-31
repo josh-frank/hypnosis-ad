@@ -1,0 +1,41 @@
+#spiral-svg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+#spiral {
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: infinite;
+  -webkit-animation-name: rotate;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-fill-mode: infinite;
+}
+
+#timer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  font-size: 11pt;
+  font-weight: bold;
+  font-family: monospace, monospace;
+  color: white;
+  background-color: black;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@-webkit-keyframes rotate {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
