@@ -79,7 +79,7 @@ const App = () => {
         padding: 5,
         // fontSize: 9,
         lineHeight: 1.3,
-        // letterSpacing: -0.75,
+        letterSpacing: 1.05, // letterSpacing: -0.75,
         fontWeight: 'bold',
         textTransform: 'uppercase',
       } }
@@ -88,12 +88,11 @@ const App = () => {
         'US clients only',
         'See website for important details and terms/conditions',
         `©${ new Date().getFullYear() } QuitSmokingWithHypnosis.com`,
-        'You\'re already feeling very relaxed'
+        'You\'re already feeling very relaxed!'
       ] ).flat().map(
         ( element, index ) => <span key={ index }>{ element }</span>
       ) }
     </marquee>
-    
 
     {/* <marquee scrollAmount={ 10 }>
       <h1>✆ Text (833) 78-HYPNO for a FREE consultation</h1>
@@ -115,10 +114,10 @@ export default App
 
 const AdText = () => <>
   <text textAnchor="middle" dx='0' dy='-265'>Quit</text>
-  <text textAnchor="middle" dx='0' dy='-133'>Smoking</text>
-  <text textAnchor="middle" dx='0' dy='25'>With</text>
-  <text textAnchor="middle" dx='0' dy='150'>Hypnosis</text>
-  <text textAnchor="middle" dx='0' dy='285'>.com</text>
+  <text textAnchor="middle" dx='0' dy='-125'>Smoking</text>
+  <text textAnchor="middle" dx='0' dy='15'>with</text>
+  <text textAnchor="middle" dx='0' dy='140'>Hypnosis</text>
+  <text textAnchor="middle" dx='0' dy='275'>.com</text>
 </>;
 
 ///////////////////////

@@ -3,10 +3,10 @@
 }
 
 text {
-  fill: #b00;
+  fill: yellowgreen;
   font-weight: bold;
   font-size: 120pt;
-  filter: drop-shadow( 4px 4px 0 black);
+  filter: drop-shadow( 5px 5px 0 black);
 
   /* font-family: 'Comic Sans MS' !important; */
 

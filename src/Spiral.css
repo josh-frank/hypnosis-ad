@@ -3,16 +3,17 @@
   top: 0;
   left: 0;
   overflow: hidden;
+  background: #333;
 }
 
 #spiral {
   animation-name: rotate;
-  animation-duration: 2s;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-fill-mode: infinite;
   -webkit-animation-name: rotate;
-  -webkit-animation-duration: 2s;
+  -webkit-animation-duration: 3s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   -webkit-animation-fill-mode: infinite;
