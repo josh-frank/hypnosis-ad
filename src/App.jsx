@@ -1,6 +1,7 @@
 import './App.css'
 import './Spiral.css'
 // import { useEffect, useState } from "react";
+import { useSearchParams } from 'react-router-dom';
 import { QRCodeSVG } from 'qrcode.react';
 
 const App = () => {
@@ -11,6 +12,8 @@ const App = () => {
   //   const interval = setInterval( () => setTimer( timer + 1 ), 1000 );
   //   return () => clearInterval( interval );
   // }, [ timer ] );
+
+  const [ urlParams ] = useSearchParams();
 
   const boundingBox = new Rectangle(
     -window.innerHeight / 2,
@@ -54,36 +57,14 @@ const App = () => {
     </svg>
 
     <QRCodeSVG
-      value='https://quitsmokingwithhypnosis.com/'
-      size={ 200 }
+      id="qr-code"
+      value={ urlParams.get( 'qrCode' ) || 'https://quitsmokingwithhypnosis.com/' }
+      // size={ 200 }
       marginSize={ 4 }
       level='H'
-      style={ {
-        zIndex: 10,
-        position: 'absolute',
-        bottom: 10,
-        right: 10,
-        borderRadius: 10
-      } }
     />
 
-    <marquee
-      scrollamount={ 16 }
-      style={ {
-        position: 'absolute',
-        bottom: 10,
-        left: 10,
-        backgroundColor: 'black',
-        color: 'white',
-        borderRadius: 5,
-        padding: 5,
-        // fontSize: 9,
-        lineHeight: 1.3,
-        letterSpacing: 1.05, // letterSpacing: -0.75,
-        fontWeight: 'bold',
-        textTransform: 'uppercase',
-      } }
-    >
+    <marquee scrollamount={ 16 }>
       { Array( 10 ).fill( [
         'US clients only',
         'See website for important details and terms/conditions',
@@ -113,11 +94,15 @@ const App = () => {
 export default App
 
 const AdText = () => <>
-  <text textAnchor="middle" dx='0' dy='-265'>Quit</text>
-  <text textAnchor="middle" dx='0' dy='-125'>Smoking</text>
-  <text textAnchor="middle" dx='0' dy='15'>with</text>
-  <text textAnchor="middle" dx='0' dy='140'>Hypnosis</text>
-  <text textAnchor="middle" dx='0' dy='275'>.com</text>
+  <text className="vertical" textAnchor="middle" dx='0' dy='-200'>Quit</text>
+  <text className="vertical" textAnchor="middle" dx='0' dy='-60'>Smoking</text>
+  <text className="vertical" textAnchor="middle" dx='0' dy='15'><tspan>with</tspan></text>
+  <text className="vertical" textAnchor="middle" dx='0' dy='125'>Hypnosis</text>
+  <text className="vertical" textAnchor="middle" dx='0' dy='200'><tspan>.com</tspan></text>
+  <text className="horizontal" textAnchor="middle" dx='0' dy='-30'>QuitSmoking</text>
+  <text className="horizontal" textAnchor="middle" dx='0' dy='100'>
+    <tspan>with</tspan>Hypnosis<tspan>.com</tspan>
+  </text>
 </>;
 
 ///////////////////////
